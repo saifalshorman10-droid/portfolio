@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SID: 158376 - SAIF ALSHORMAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل الاحترافي -->
+    <nav class="navbar">
+        <div class="nav-brand">CyberPortfolio</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- الهيدر الرئيسي مع صورة البروفايل -->
+    <header class="header-section">
+        <div class="profile-container">
+            <!-- صورة البروفايل الدائرية مع تفعيل الضغط للتكبير -->
+            <img src="profile.jpg" alt="Saif Alshorman" class="profile-img" onclick="toggleZoom(this)">
+            <h1>SAIF ALSHORMAN</h1>
+            <p class="subtitle">Major: Computer Information Systems | Academic Level: Fourth Year</p>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="content-container">
+        
+        <!-- القسم الأول: المهارات -->
+        <section class="card">
+            <h2><span class="icon">⚡</span> Key Soft Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-badge">Teamwork</span>
+                <span class="skill-badge">Analytical Thinking</span>
+                <span class="skill-badge">Problem-Solving</span>
+                <span class="skill-badge">Communication</span>
+                <span class="skill-badge">Adaptability</span>
+            </div>
+        </section>
+
+        <!-- القسم الثاني: التقنيات المفضلة والأدوات -->
+        <section class="card">
+            <h2><span class="icon">🛠️</span> Favorite Technologies & Tools</h2>
+            <div class="table-responsive">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Technology / Tool</th>
+                            <th>Category</th>
+                            <th>Official Portal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td>Programming Language</td>
+                            <td><a href="https://www.python.org" target="_blank">python.org</a></td>
+                        </tr>
+                        <tr>
+                            <td>Wireshark</td>
+                            <td>Cybersecurity Tool</td>
+                            <td><a href="https://www.wireshark.org" target="_blank">wireshark.org</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- القسم الثالث: قائمة المواد الـ 20 المجتازة -->
+        <section class="card">
+            <h2><span class="icon">📚</span> Completed Courses (20 Completed Courses)</h2>
+            <div class="table-responsive">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Course Name / Title</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Calculus (1)</td><td>University Requirement</td><td>Passed</td></tr>
+                        <tr><td>2</td><td>Calculus (2)</td><td>University Requirement</td><td>Passed</td></tr>
+                        <tr><td>3</td><td>Physics (1)</td><td>University Requirement</td><td>Passed</td></tr>
+                        <tr><td>4</td><td>Computer Skills (Programming in Python/C++)</td><td>Faculty Requirement</td><td>Passed</td></tr>
+                        <tr><td>5</td><td>Discrete Structures</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>6</td><td>Object-Oriented Programming (OOP)</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>7</td><td>Data Structures</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>8</td><td>Digital Logic Design</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>9</td><td>Computer Organization & Architecture</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>10</td><td>Database Systems</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>11</td><td>Algorithms Analysis & Design</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>12</td><td>Software Engineering</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>13</td><td>Operating Systems</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>14</td><td>Computer Networks</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>15</td><td>Web Programming & Development</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>16</td><td>Information Security & Cybersecurity</td><td>Core Requirement</td><td>Passed</td></tr>
+                        <tr><td>17</td><td>Visual Programming</td><td>Major Elective</td><td>Passed</td></tr>
+                        <tr><td>18</td><td>Human-Computer Interaction</td><td>Major Elective</td><td>Passed</td></tr>
+                        <tr><td>19</td><td>Technical Writing & Communication</td><td>University Requirement</td><td>Passed</td></tr>
+                        <tr><td>20</td><td>Linear Algebra</td><td>Faculty Requirement</td><td>Passed</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- دالة JavaScript لتكبير وتصغير الصورة عند النقر -->
+    <script>
+        function toggleZoom(img) {
+            img.classList.toggle('zoomed');
+        }
+    </script>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>&copy; 2026 Jordan University of Science and Technology</p>
+    </footer>
+
+</body>
+</html>

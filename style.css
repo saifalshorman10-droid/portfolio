@@ -1,0 +1,252 @@
+/* --- إعدادات وتنسيقات عامة للموقع --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* --- شريط التنقل (Navbar) --- */
+.navbar {
+    background-color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #00bcd4;
+}
+
+/* --- الهيدر وصورة البروفايل --- */
+.header-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- تنسيق صورة البروفايل الدائرية تماماً --- */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* يحافظ على شكل الدائرة تماماً */
+    border: 4px solid #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+    
+    /* لملء الدائرة تماماً وإزالة الفراغات الجانبية */
+    object-fit: cover;    
+    object-position: center top; /* التركيز على الوجه وسط الصورة */
+    
+    cursor: pointer; /* تغيير شكل المؤشر ليدل على إمكانية الضغط */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+/* تأثير عند تمرير الفأرة */
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.9);
+}
+
+/* حالة التكبير عند الضغط عليها داخل الصفحة */
+.profile-img.zoomed {
+    transform: scale(2.2);
+    border-radius: 50%; /* تبقى دائرية حتى عند التكبير */
+    z-index: 999;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 188, 212, 1);
+}
+
+.header-section h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+/* --- الحاويات والبطاقات (Cards) --- */
+.content-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #334155;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* --- قسم المهارات (Skills Grid) --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-badge {
+    background-color: #334155;
+    color: #00bcd4;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #475569;
+}
+
+/* --- تنسيق الجدول (Tables) --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tech-table th,
+.tech-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #334155;
+}
+
+.tech-table th {
+    background-color: #0f172a;
+    color: #00bcd4;
+    font-weight: 600;
+}
+
+.tech-table td a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.tech-table td a:hover {
+    text-decoration: underline;
+}
+
+/* --- تنسيق نموذج التواصل (Contact Form) --- */
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-desc {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00bcd4;
+}
+
+.submit-btn {
+    background-color: #00bcd4;
+    color: #0f172a;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* --- تذييل الصفحة (Footer) --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+    margin-top: 3rem;
+}

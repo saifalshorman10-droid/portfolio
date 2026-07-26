@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل الاحترافي -->
+    <nav class="navbar">
+        <div class="nav-brand">CyberPortfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html" class="active">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-container">
+        <section class="card form-card">
+            <h2><span class="icon">💬</span> Get in Touch</h2>
+            <p class="form-desc">Have a question or want to collaborate? Fill out the form below.</p>
+            
+            <!-- تم إزالة الـ action التقليدي لكي يتم الإرسال عبر الجافاسكريبت في الخلفية -->
+            <form id="contactForm" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Your country" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comments / Message</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- كود JavaScript لإرسال الإيميل في الخلفية وتفريغ الحقول دون الانتقال لصفحة أخرى -->
+    <script>
+        async function sendEmail(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة أو الانتقال لموقع آخر
+
+            var form = document.getElementById("contactForm");
+            var formData = new FormData(form);
+            var submitBtn = document.getElementById("submitBtn");
+            
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+
+            try {
+                // رابط Formspree الخاص بك
+                var response = await fetch("https://formspree.io/f/xgogroqp", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert("Success: Your message has been sent successfully to my email!");
+                    form.reset(); // تفريغ الحقول بالكامل لتصبح فاضية
+                } else {
+                    alert("Oops! There was a problem submitting your form.");
+                }
+            } catch (error) {
+                alert("Error connecting to the server.");
+            } finally {
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Jordan University of Science and Technology</p>
+    </footer>
+
+</body>
+</html>
